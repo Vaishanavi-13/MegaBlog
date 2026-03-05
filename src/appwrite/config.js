@@ -1,5 +1,5 @@
 import { transformWithEsbuild } from "vite";
-import conf from "../conf.js";
+import conf from "../conf/conf";
 import {Client, ID, TablesDB, Storage} from "appwrite";
 const sdk = require('node-appwrite');
 
