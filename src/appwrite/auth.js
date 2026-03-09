@@ -51,14 +51,14 @@ export class AuthService {
     }
   }
 
-  async getCurrentUser() {
-    try {
-      return await this.account.get();
-    } catch (error) {
-      console.log("Appwrite :: getCurrentUser :: error", error);
-      return null;
-    }
+async getCurrentUser() {
+  try {
+    return await this.account.get();
+  } catch (error) {
+    console.log("No active session");
+    return null;   // IMPORTANT
   }
+}
 }
 
 const authService = new AuthService();
